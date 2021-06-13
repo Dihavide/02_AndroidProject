@@ -22,6 +22,8 @@
 
         </activity>
         <activity android:name=".ViewScheduleActivity" />
+        <activity android:name=".AddToScheduleActivity"/>
+        <activity android:name=".DeleteFromScheduleActivity"/>
     </application>
 
 </manifest>

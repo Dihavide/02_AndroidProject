@@ -11,8 +11,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnCheckSchedule.setOnClickListener {
-            val intent = Intent(this,ViewScheduleActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,ViewScheduleActivity::class.java))
+        }
+
+        btnAddToSchedule.setOnClickListener {
+            startActivity(Intent(this,AddToScheduleActivity::class.java))
+        }
+
+        btnDeleteFromSchedule.setOnClickListener {
+            startActivity(Intent(this,DeleteFromScheduleActivity::class.java))
         }
 
     }
