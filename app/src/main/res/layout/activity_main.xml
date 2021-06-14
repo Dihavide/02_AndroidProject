@@ -4,19 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:background="#81D4FA"
     android:padding="10dp"
-    android:background="#81D4FA">
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivTimerIconHome"
+        android:layout_width="480dp"
+        android:layout_height="568dp"
+        android:layout_centerInParent="true"
+        android:alpha=".40"
+        android:src="@drawable/ic_baseline_timelapse_24"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Schedule"
         android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="My Schedule"
+        android:textColor="#FF000000"
         android:textSize="50sp"
         android:textStyle="bold"
-        android:gravity="center_horizontal"
-        android:textColor="#FF000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -49,9 +63,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
+        android:gravity="center"
         android:hint="App by Havi Patel and Kishowth Moganasundaram"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
