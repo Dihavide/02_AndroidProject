@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:background="#48bfe3">
+    android:background="#FA0202">
 
     <Button
         android:id="@+id/btnDelete"
@@ -17,13 +17,14 @@
 
     <TextView
         android:id="@+id/tvDeleteFromScheduleTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Deleting From The Schedule"
+        android:layout_width="366dp"
+        android:layout_height="65dp"
+        android:fontFamily="sans-serif-condensed"
         android:gravity="center"
-        android:textSize="25dp"
+        android:text="Remove Task"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp"
         android:textStyle="bold"
-        android:textColor="#FF000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

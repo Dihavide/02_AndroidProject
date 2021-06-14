@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#48bfe3"
+    android:background="#FA0202"
     android:padding="10dp"
     tools:context=".MainActivity">
 
@@ -16,7 +16,7 @@
         android:alpha=".40"
         android:src="@drawable/ic_baseline_timelapse_24"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreatorNames"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,11 +25,11 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="serif"
+        android:fontFamily="sans-serif-condensed"
         android:gravity="center_horizontal"
         android:text="My Schedule"
-        android:textColor="#FF000000"
-        android:textSize="50sp"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.464"
@@ -54,16 +54,18 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="324dp"
         android:gravity="center"
-        android:text="Add to schedule"
+        android:text="Add Task"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="3dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvCreatorNames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
         android:hint="App by Havi Patel and Kishowth Moganasundaram"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -74,8 +76,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="220dp"
         android:gravity="center"
-        android:text="Delete from schedule"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        android:text="Remove Task"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreatorNames"
         tools:layout_editor_absoluteX="-6dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
