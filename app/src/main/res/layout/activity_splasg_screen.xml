@@ -14,7 +14,7 @@
         android:layout_centerInParent="true"
         android:background="#00FBFBFB"
         android:src="@drawable/ic_baseline_timelapse_24"
-        app:tint="#FFFFFF" />
+        app:tint="@color/black" />
 
 
 </RelativeLayout>
