@@ -25,7 +25,7 @@
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:text="Remove Task"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textSize="50dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
