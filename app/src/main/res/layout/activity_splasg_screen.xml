@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".SplasgScreenActivity">
 
     <ImageView
+        android:id="@+id/timerIcon"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/ic_baseline_timelapse_24"
         android:layout_centerInParent="true"
-        android:id="@+id/timerIcon"/>
-
+        android:background="#00FBFBFB"
+        android:src="@drawable/ic_baseline_timelapse_24"
+        app:tint="#FF0000" />
 
 
 </RelativeLayout>
