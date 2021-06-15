@@ -9,7 +9,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+/**
+ *This allows the 'btnCheckSchedule' to perform a function upon clicking
+ **/
         btnCheckSchedule.setOnClickListener {
             startActivity(Intent(this,ViewScheduleActivity::class.java))
         }
