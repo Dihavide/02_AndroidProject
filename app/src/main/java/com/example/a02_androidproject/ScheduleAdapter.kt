@@ -10,13 +10,14 @@ class ScheduleAdapter(private val schedules : MutableList<Schedule>) : RecyclerV
 {
     class ScheduleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewHolder {
+        val schedView = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent,false)
+        return ScheduleViewHolder(schedView)
+    }
+
     override fun onBindViewHolder(holder: ScheduleViewHolder, position: Int) {
         val curSchedule = schedules[position]
         holder.itemView.tvScheduleInformation.text = curSchedule.givenSchedule
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewHolder {
-        return ScheduleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item,parent,false))
     }
 
     override fun getItemCount(): Int {
