@@ -10,22 +10,22 @@ class ScheduleAdapter(private val schedules : MutableList<Schedule>) : RecyclerV
 {
     class ScheduleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
+    override fun onBindViewHolder(holder: ScheduleViewHolder, position: Int) {
+        val curSchedule = schedules[position]
+        holder.itemView.tvScheduleInformation.text = curSchedule.givenSchedule
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleViewHolder {
         return ScheduleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item,parent,false))
+    }
+
+    override fun getItemCount(): Int {
+        return schedules.size
     }
 
     fun addSchedule(schedule: Schedule)
     {
         schedules.add(schedule)
         notifyItemInserted(schedules.size-1)
-    }
-
-    override fun onBindViewHolder(holder: ScheduleViewHolder, position: Int) {
-        val curSchedule = schedules[position]
-        holder.itemView.tvScheduleInformation.text = curSchedule.schedule
-    }
-
-    override fun getItemCount(): Int {
-        return schedules.size
     }
 }
