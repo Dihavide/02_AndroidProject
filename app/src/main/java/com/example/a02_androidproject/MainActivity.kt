@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnAddToSchedule.setOnClickListener {
-            startActivity(Intent(this,AddToScheduleActivity::class.java))
+            startActivity(Intent(this,ViewScheduleActivity::class.java))
         }
 
         btnDeleteFromSchedule.setOnClickListener {

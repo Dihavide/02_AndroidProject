@@ -40,14 +40,14 @@
         android:id="@+id/btnDeleteFromSchedule2"
         android:layout_width="369dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="4dp"
         android:fontFamily="sans-serif-condensed"
         android:text="Delete"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddTextToSchedule" />
 
     <Button
         android:id="@+id/btnAddTextToSchedule"
@@ -59,11 +59,11 @@
         android:text="Add"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnDeleteFromSchedule2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAddToSchedule"
         app:layout_constraintVertical_bias="0.951"
         android:layout_marginLeft="4dp" />
 
@@ -88,7 +88,7 @@
         app:layout_constraintBottom_toTopOf="@+id/etAddToSchedule"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitleSchedule" />
+        app:layout_constraintTop_toBottomOf="@id/tvTitleSchedule"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
