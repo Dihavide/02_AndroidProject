@@ -14,25 +14,5 @@ class AddToScheduleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_schedule_to_add)
 
-//        rvScheduleList.adapter = ScheduleAdapter(mutableListOf())
-//        rvScheduleList.layoutManager = LinearLayoutManager(this)
-
-        btnAddTextToSchedule.setOnClickListener {
-            Toast.makeText(this, etAddToSchedule.text.toString(), Toast.LENGTH_SHORT).show()
-        }
-
-//        btnAddTextToSchedule.setOnClickListener {
-//            val scheduleContent = etAddToSchedule.text.toString()
-//            if(scheduleContent.isNotEmpty())
-//            {
-//                ScheduleAdapter(mutableListOf()).addSchedule(Schedule(scheduleContent))
-//                etAddToSchedule.text.clear()
-//            }
-//            else
-//            {
-//                Toast.makeText(this, "You have not inputted any parameters", Toast.LENGTH_SHORT).show()
-//            }
-//        }
-
     }
 }
