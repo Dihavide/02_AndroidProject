@@ -20,7 +20,7 @@ class ViewScheduleActivity : AppCompatActivity() {
         rvScheduleList.layoutManager = LinearLayoutManager(this)
 
         btnAddTextToSchedule.setOnClickListener {
-            val scheduleContent = etAddToSchedule.text.toString()
+            val scheduleContent = "    -  " + etAddToSchedule.text.toString()
             if(scheduleContent.isNotEmpty())
             {
                 scheduleAdapter.addSchedule(Schedule(scheduleContent))
