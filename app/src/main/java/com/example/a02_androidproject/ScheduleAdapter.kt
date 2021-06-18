@@ -27,10 +27,13 @@ class ScheduleAdapter(private val schedules : MutableList<Schedule>) : RecyclerV
         holder.itemView.tvScheduleInformation.text = curSchedule.givenSchedule
     }
 
-
-
     override fun getItemCount(): Int {
         return schedules.size
+    }
+
+    fun getScheduleList(): MutableList<Schedule>
+    {
+        return schedules
     }
 
 }

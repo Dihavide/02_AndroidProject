@@ -16,12 +16,14 @@ class ViewScheduleActivity : AppCompatActivity() {
         //Sets the view of the activity to the correct .xml layout file
         setContentView(R.layout.activity_schedule_view)
 
+
+
         //Sends an empty array into ScheduleAdapter and sets it to a variable
         scheduleAdapter = ScheduleAdapter(mutableListOf())
 
-        //Uses the ScheduleAdapter that was passed an empty array and adapts it to the recyclerview
+        //Uses the ScheduleAdapter class that was passed an empty or populated array and adapts it to the recyclerview layout for a visual list of that array
         rvScheduleList.adapter = scheduleAdapter
-        //Makes it so that the orientation of the recyclerview is that of a linear one
+        //Makes it so that the visual orientation of the recyclerview is that of a linear one
         rvScheduleList.layoutManager = LinearLayoutManager(this)
 
         /**
