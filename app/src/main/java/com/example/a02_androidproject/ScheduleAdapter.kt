@@ -3,9 +3,9 @@ package com.example.a02_androidproject
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_item.view.*
+
 
 class ScheduleAdapter(private val schedules : MutableList<Schedule>) : RecyclerView.Adapter<ScheduleAdapter.ScheduleViewHolder>()
 {
@@ -26,6 +26,8 @@ class ScheduleAdapter(private val schedules : MutableList<Schedule>) : RecyclerV
         val curSchedule = schedules[position]
         holder.itemView.tvScheduleInformation.text = curSchedule.givenSchedule
     }
+
+
 
     override fun getItemCount(): Int {
         return schedules.size
