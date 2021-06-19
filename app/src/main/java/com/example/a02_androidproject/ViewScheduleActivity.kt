@@ -34,15 +34,22 @@ class ViewScheduleActivity : AppCompatActivity() {
 
             //Sets the user input inside the etAddToSchedule space to a string and stores it into a  variable
             val scheduleContent = etAddToSchedule.text.toString()
+            val givenTimeFrom = etTimeFrom.text.toString()
+            val givenTimeTo = etTimeTo.text.toString()
 
             //If user input was given upon the click of the button
-            if(scheduleContent.isNotEmpty())
+            if(scheduleContent.isNotEmpty() && givenTimeFrom.isNotEmpty() && givenTimeTo.isNotEmpty())
             {
-                val displaySchedule = "    -  " + scheduleContent
+                val displaySchedule = " - " + scheduleContent
+                val displayTimeFrom = " From : " + givenTimeFrom
+                val displayTimeTo = " To : " + givenTimeTo
+
                 //Take the user input, run it through the data class,then uses the addSchedule function found in the adapter to add that user input into the array at the last index
-                scheduleAdapter.addSchedule(Schedule(displaySchedule))
-                //Clears any user input that is already inside the etAddToSchedule box
+                scheduleAdapter.addSchedule(Schedule(displaySchedule, displayTimeFrom, displayTimeTo))
+                //Clears any user input that is already inside the user input boxes
                 etAddToSchedule.text.clear()
+                etTimeFrom.text.clear()
+                etTimeTo.text.clear()
                 //Creates a message saying that the input has been added to the schedule
                 Toast.makeText(this, "Added to schedule", Toast.LENGTH_SHORT).show()
             }
@@ -51,7 +58,7 @@ class ViewScheduleActivity : AppCompatActivity() {
             else
             {
                 //Creates a message indicating that no input was given
-                Toast.makeText(this, "You have not inputted any parameters", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "You are missing some parameters", Toast.LENGTH_SHORT).show()
             }
         }
 

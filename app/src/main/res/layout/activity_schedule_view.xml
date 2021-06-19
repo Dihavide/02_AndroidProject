@@ -69,17 +69,41 @@
 
     <EditText
         android:id="@+id/etAddToSchedule"
-        android:layout_width="340dp"
+        android:layout_width="177dp"
         android:layout_height="50dp"
         android:hint="Add to schedule"
         android:textColor="#FFFFFF"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/btnAddTextToSchedule"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvScheduleList"
         app:layout_constraintVertical_bias="0.841" />
+
+    <EditText
+        android:id="@+id/etTimeFrom"
+        android:layout_width="97dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="176dp"
+        android:hint="From:"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/btnAddTextToSchedule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvScheduleList"
+        app:layout_constraintVertical_bias="0.828" />
+
+    <EditText
+        android:id="@+id/etTimeTo"
+        android:layout_width="97dp"
+        android:layout_height="50dp"
+        android:hint="To:"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/btnAddTextToSchedule"
+        app:layout_constraintStart_toEndOf="@id/etTimeFrom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvScheduleList"
+        app:layout_constraintVertical_bias="0.831" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvScheduleList"

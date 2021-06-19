@@ -56,5 +56,7 @@ class ScheduleAdapter(private val schedules : MutableList<Schedule>) : RecyclerV
     override fun onBindViewHolder(holder: ScheduleViewHolder, position: Int) {
         val curSchedule = schedules[position]
         holder.itemView.tvScheduleInformation.text = curSchedule.givenSchedule
+        holder.itemView.tvFromTime.text = curSchedule.givenTimeFrom
+        holder.itemView.tvToTime.text = curSchedule.givenTimeTo
     }
 }
