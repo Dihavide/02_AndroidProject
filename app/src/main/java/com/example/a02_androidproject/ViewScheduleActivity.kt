@@ -16,8 +16,6 @@ class ViewScheduleActivity : AppCompatActivity() {
         //Sets the view of the activity to the correct .xml layout file
         setContentView(R.layout.activity_schedule_view)
 
-
-
         //Sends an empty array into ScheduleAdapter and sets it to a variable
         scheduleAdapter = ScheduleAdapter(mutableListOf())
 
@@ -37,12 +35,12 @@ class ViewScheduleActivity : AppCompatActivity() {
             val givenTimeFrom = etTimeFrom.text.toString()
             val givenTimeTo = etTimeTo.text.toString()
 
-            //If user input was given upon the click of the button
+            //If all user input was given upon the click of the button
             if(scheduleContent.isNotEmpty() && givenTimeFrom.isNotEmpty() && givenTimeTo.isNotEmpty())
             {
-                val displaySchedule = " - " + scheduleContent
-                val displayTimeFrom = " From : " + givenTimeFrom
-                val displayTimeTo = " To : " + givenTimeTo
+                val displaySchedule = " - $scheduleContent"
+                val displayTimeFrom = " From : $givenTimeFrom"
+                val displayTimeTo = " To : $givenTimeTo"
 
                 //Take the user input, run it through the data class,then uses the addSchedule function found in the adapter to add that user input into the array at the last index
                 scheduleAdapter.addSchedule(Schedule(displaySchedule, displayTimeFrom, displayTimeTo))
@@ -54,7 +52,7 @@ class ViewScheduleActivity : AppCompatActivity() {
                 Toast.makeText(this, "Added to schedule", Toast.LENGTH_SHORT).show()
             }
 
-            //If user input was not given upon the click of the button
+            //If all user input was not given upon the click of the button
             else
             {
                 //Creates a message indicating that no input was given
@@ -69,6 +67,15 @@ class ViewScheduleActivity : AppCompatActivity() {
         btnDeleteFromSchedule2.setOnClickListener {
             startActivity(Intent(this,DeleteFromScheduleActivity::class.java))
         }
-
     }
+
+//    override fun onResume() {
+//        super.onResume()
+//        scheduleAdapter.notifyDataSetChanged()
+//    }
+//
+//    override fun onSaveInstanceState(outState: Bundle) {
+//        savedInstanceState.putParceableArrayList()
+//        super.onSaveInstanceState(outState)
+//    }
 }
