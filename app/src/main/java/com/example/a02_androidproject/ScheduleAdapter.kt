@@ -11,6 +11,8 @@ class ScheduleAdapter(private val schedules : MutableList<Schedule>) : RecyclerV
 {
     class ScheduleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
+
+
     /**
      *Accessors
      **/
@@ -59,5 +61,4 @@ class ScheduleAdapter(private val schedules : MutableList<Schedule>) : RecyclerV
         holder.itemView.tvFromTime.text = curSchedule.givenTimeFrom
         holder.itemView.tvToTime.text = curSchedule.givenTimeTo
     }
-
 }

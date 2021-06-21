@@ -2,6 +2,8 @@ package com.example.a02_androidproject
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Parcelable
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -68,14 +70,6 @@ class ViewScheduleActivity : AppCompatActivity() {
             startActivity(Intent(this,DeleteFromScheduleActivity::class.java))
         }
     }
-
-//    override fun onResume() {
-//        super.onResume()
-//        scheduleAdapter.notifyDataSetChanged()
-//    }
-//
-//    override fun onSaveInstanceState(outState: Bundle) {
-//        savedInstanceState.putParceableArrayList()
-//        super.onSaveInstanceState(outState)
-//    }
 }
+
+
